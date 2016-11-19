@@ -1,0 +1,123 @@
+var lang_es = {
+    PublicPolls: "Encuestas Públicas",
+    Welcome: "Hola, bienvenido a la APP de 'Click to Vote'",
+    rules: "1. haz click en el link <b>'vote-to-click'</b> para cargar las votaciones<br/>"
+            + "2. realiza tu <b>votación</b> <b>vote</b><br/>"
+            + "3. y <b>comparte</b> la imagen actualizada donde quieras!",
+    MakeNew: "Nueva Encuesta",
+    Create: "Crear",
+    VotedPolls: "Encuestas votadas:",
+    swipeToRemove: "desplaza el dedo para descartar",
+    showYourPolls: "mostrar tus encuestas",
+    Back: "Atrás",
+    'Share+': "Compartir+",
+    Share: "Compartir",
+    Save: "Guardar",
+    Voters: "Votantes",
+    Cancel: "Cancelar",
+    needsPhone: "Para realizar votaciones públicas prevenimos el uso de robots enviándole un SMS a su número de teléfono",
+    needsPhoneComment: "Este método de identificación viene proporcionado por la suite de desarrollo de twitter y la aplicación encriptará su número de teléfono.",
+    multipleChoice: "Permite votar más de una opción.",
+    onlyDevice: "Solo permitir votos desde la App.",
+    openVotes: "Votaciones abiertas",
+    firstOk: "Ok",
+    Activate: "Activar"
+    ,
+    //~vote placeholders
+    QuestionPlaceholder: "Escribe aquí la pregunta, incluye información extra en la siguiente linea.",
+    OptionsPlaceholder: "Pon cada opción en una linea diferente.",
+    UsernamePlaceholder: "Tu nombre (opcional)",
+    //~vote js
+    PublicOnlyFromApp: "Para votar encuestas públicas necesitas usar la <u>APP</u>",
+    PollOnlyAvailableIn: "- Esta encuesta solo está disponible en ",
+    AllowAppServices: "Por favor, <b>mejora</b> tu experiencia de usuario autorizando <b>'acceso a usos'</b>.</b>.",
+    whyNeedServicesPermission: 'porque es necesario esto?<br/>'
+            + 'Desde la versión android 5.0 Lollipop, es necesario un permiso especial para leer el uso de aplicaciones. '
+            + 'Necesitamos esta información para mejorar la implementación con otras aplicaciones sociales.',
+    votationNotExists: "la votación no existe",
+    votationNotSaved: "no puede conectarse con el servidor: la votación no ha sido guardada",
+    waitingKey: "haciendo democracia..",
+    waitingKeyExpired: "Error al guardar la encuesta. Prueba otra vez..",
+    onlyMostVotedShows: "por defecto solo las 4 opciones más votadas se mostrarán en la imagen compartida.",
+    hidePolls: "ocultar encuestas",
+    notPublicUsers: "no hay nombres de votantes",
+    missingAjaxKey: "Aún no se ha recibido un código para la nueva encuesta. Por favor, comprueba que estás conectado a internet.",
+    more: "más",
+    min1Option: "pon al menos 1 opción",
+    myName: "Introduce un nombre",
+    requiredName: "Introduce un nombre (obligatorio)",
+    privateNeedUserName: "Es necesario que introduzcas tu nombre (solo encuestas privadas)",
+    unknown: "desconocidos",
+    browser: "browser",
+    notInApp: "Usa la App para reenviar la encuesta."
+    ,
+    //~vote ERRORS
+    error: "error",
+    errorAjaxResponse: "error al recibir la respuesta ajax",
+    votationNotFound: "votación no encontrada.",
+    votationRemoved: "lo sentimos, esta votacion parece haber sido eliminada",
+    WrongCountry: "No estas localizado en ",
+    notValidUserId: "id de usuario no válido",
+    notLoadingPolls: "error al descargar las encuestas",
+    warnNotPublic: "aviso: esta encuesta es privada y no valida a los usuarios, por lo que no es válida para votaciones públicas",
+    e_noDataReceived: "no se han recibido datos",
+    e_phoneValidationNotWork: "Problemas para hacer funcionar la verificación a través de SMS? Por favor si es así contacta con nosotros.",
+    warnMaximumOptions: "si muestras más de 4 opciones, comprueba que la imagen no quede cortada en el entorno donde la compartas.",
+    e_retrievingData: "encuesta no encontrada, comprueba tu conexión:",
+    loadingPublicKey: "Validando el número de teléfono, vuelve a intentarlo en unos segundos.."
+    ,
+    ///////////////////////////////////////////////////////////////////////////
+    //~polls
+    PopularPolls: "Encuestas populares:",
+    total: "total",
+    New: "Nueva",
+    search: "buscar",
+    showAll: "mostrar todos los paises",
+    showMine: "por defecto",
+    duplicatedKey: "key duplicada",
+    noPollsFound: "no se han encontrado encuestas"
+    ,
+    //parse
+    forgetPoll: "descartar",
+    UNDO: "RECUPERAR"
+    ,
+    //premium
+    CustomStyles: "Estilo por defecto:",
+    defaults: "por defecto",
+    Symbol: "Símbolo:",
+    ChooseFile: "Subir Imagen",
+    QuestionColor: "Color de pregunta:",
+    OptionTextColor: "Texto de optiones:",
+    BackgroundColor: "Color de fondo:",
+    GradientBackground: "Fondo de degradado:",
+    GradientColor1: "Color degradado 1:",
+    GradientColor2: "Color degradado 2:",
+    LimitByCountry: "Limitar por región:",
+    WillShowPublic: "- Las votaciones públicas se añaden a 'Encuestas Públicas'.",
+    ChooseCountry: "Paises",
+    ExampleQuestion: "Esta es una pregunta de prueba \nY esto información extra",
+    OptionExample1: "Ejemplo de opción A",
+    OptionExample2: "Ejemplo de opción B",
+    ownerNameExample: "este es el nombre del creador",
+    AddPollLink: "Añade un LINK web para esta encuesta",
+    Public: "Público",
+    StyleNamePlaceholder: "nombre del estilo",
+    SaveStyle: "Guardar",
+    Delete: "Eliminar",
+    allCountries: "cualquier país..",
+    Yes: "Si",
+    Not: "No",
+    cantChangePublic: "Esta encuesta ya ha sido guardada. Para cambiar el valor Público, cancela esta y crea una nueva.",
+    noUserCountryFound: "error: no se ha reconocido la ubicación del número de teléfono, por favor contacta con nosotros",
+    p_notEditable: "Sin opciones displonibles aqui."
+    ,
+    //js ERRORS
+    e_votationRemoved: "lo sentimos, esta votación parece haber sido eliminada",
+    e_connectionLost: "se ha perdido la conexión",
+    e_votationWithErrors: "lo sentimos, esta votación contiene errores, Por favor contacta con nosotros.",
+    e_flagNotFound: "no se ha podido cargar la bandera de ",
+    e_parsingIndexFile: "error de lectura con el archivo _index.txt"
+    ,
+    //COMMON ERRORS
+    e_connection: "por favor, comprueba tu conexión de internet y prueba de nuevo"
+};

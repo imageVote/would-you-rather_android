@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="at.clicktovote"
+          android:versionCode="31"
+          android:versionName="0.31" 
+          android:sharedUserId="at.clicktovote"
+          xmlns:tools="http://schemas.android.com/tools">
+    <!--'android:sharedUserId' lets share preferences between apps-->
+
+    <uses-sdk 
+        android:minSdkVersion="9"
+        android:targetSdkVersion="22"
+        tools:overrideLibrary="com.facebook"/>
+        
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!--error catch-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!--Allow activate 'usage access' (checked)-->
+    <!--'ProtectedPermissions' disable warning that permission is system level and will not be granted to third-party apps-->
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+           
+    <application
+        android:icon="@drawable/ic_launcher_free"
+        android:label="@string/free_name"
+        android:theme="@style/Theme.AppTheme">
+        
+        <!--SINGLE TASK--> 
+        <activity
+            android:name=".VoteImageActivity"
+            android:launchMode="singleTask" 
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+        </activity>
+        
+        <activity-alias 
+            android:label="@string/free_name" 
+            android:icon="@drawable/ic_launcher_free"
+            android:name=".FreeActivity"
+            android:enabled="true"
+            android:targetActivity=".VoteImageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>   
+        </activity-alias>
+        
+        <activity-alias 
+            android:label="@string/pro_name" 
+            android:icon="@drawable/ic_launcher_pro" 
+            android:name=".PremiumActivity"
+            android:enabled="false"
+            android:targetActivity=".VoteImageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>   
+        </activity-alias>
+        
+        <!--launchMode: standard callas and puts over normal activity-->
+        <activity
+            android:name="at.clicktovote.LinkActivity"
+            android:launchMode="singleInstance" 
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+
+            <intent-filter>
+                <!--important android:pathPattern prevents no last slash url-->
+                <data android:host="click-to-vote.at" android:scheme="http" android:pathPattern="/.*"/>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            
+        </activity>
+        
+        <!-- MORE share options activity-->
+        <activity
+            android:name=".MoreShareOptions"
+            android:icon="@drawable/more_icon" 
+            android:label="@string/moreShareOptionsLabel"
+            android:launchMode="singleInstance" >
+        </activity>
+        
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="17d20e8ed435e0e3808a1ced27eed2fafe3eed6f" />
+    </application>
+
+</manifest>

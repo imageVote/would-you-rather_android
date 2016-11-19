@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>click-to-vote info</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+
+        <style>
+            body{
+                margin: 85px 0 0 0;
+                font-family: sans-serif;
+            }
+            header{
+                background-color: black;
+                color: white;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                line-height: 60px;
+                cursor: pointer;
+                height: 60px;
+                font-size: 20px;
+                font-family: sans-serif;
+            }
+            header:hover{
+                background-color: rgb(98,152,222);
+            }
+            #body, header > div{
+                margin: auto;
+                max-width: 800px;
+            }
+            #body > *{
+                margin: 0 8px;
+                margin-bottom: 30px;                
+            }
+            #body > div{
+                background-color: rgb(240,240,240);
+                border-radius: 10px;
+                padding: 0 25px;
+                border: 1px solid grey;               
+            }
+        </style>
+
+        <script type="text/javascript" src="../~libs/jquery-1.11.0.min.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <div>
+                <span>
+                    Access now
+                </span>
+                <span style="float:right">
+                    click-to-vote.at
+                </span>
+            </div>
+        </header>
+
+        <div id="body">
+
+        </div>
+
+        <script>
+
+            $("#body").load("en.html");
+
+            $("header").click(function() {
+                location.href = "http://click-to-vote.at/";
+            });
+
+        </script>
+
+    </body>
+</html>

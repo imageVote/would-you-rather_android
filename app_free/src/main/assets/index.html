@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+
+        <title>Click-to-vote APP</title>
+        <!-- for Google -->
+        <meta name="description" content="Create polls throught Twitter, WhatsApp, Facebook or any other social network!">
+        <meta name="keywords" content="poll,encuesta,android,Twitter,WhatsApp,Facebook">
+
+        <meta name="author" content="" />
+        <!--<meta name="copyright" content="" />-->
+        <meta name="application-name" content="" />
+
+        <!-- for FACEBOOK -->
+        <meta property="fb:app_id" content="966242223397117" />
+        <meta property="og:title" content="click-to-vote.at | your polls tool" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="http://click-to-vote.at/~img/meta_image.png" />
+
+        <meta property="og:url" content="http://click-to-vote.at/" />
+        <meta property="og:description" content="Create polls throught Twitter, WhatsApp, Facebook or any other social network!" />
+
+        <!-- for TWITTER -->          
+        <!--        <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content="" />
+                <meta name="twitter:description" content="" />
+                <meta name="twitter:image" content="" />-->
+
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <!--load polls.css here to prevent bad rendering on load-->
+        <link rel="stylesheet" type="text/css" href="~polls/polls.css">
+        <link rel="stylesheet" type="text/css" href="~votation/votation.css">
+
+        <script type="text/javascript" src="~lang/en.js"></script>
+        <script type="text/javascript" src="~lang/es.js"></script>
+
+        <script type="text/javascript" src="~libs/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="~libs/jquery.mobile.events.min.js"></script>
+
+        <script type="text/javascript" src="~votation/votationInterface.js"></script>
+        <script type="text/javascript" src="~votation/loadVotation.js"></script>
+        <script type="text/javascript" src="~votation/newVotation.js"></script>
+        <script type="text/javascript" src="~votation/saveVotation.js"></script>        
+
+        <script type="text/javascript" src="~js/storedPolls.js"></script>
+        <script type="text/javascript" src="~js/utils.js"></script>
+        <script type="text/javascript" src="~js/parse.js"></script>
+        <script type="text/javascript" src="~js/pollTable.js"></script>
+        <script type="text/javascript" src="~js/drawPoll.js"></script>
+        <script type="text/javascript" src="~js/interface.js"></script>
+        <script type="text/javascript" src="~js/events.js"></script>
+
+        <script type="text/javascript" src="getCountryName.js"></script>
+
+        <script src="~libs/overthrow/overthrow-detect.js"></script>
+        <script src="~libs/overthrow/overthrow-init.js"></script>
+        <script src="~libs/overthrow/overthrow-polyfill.js"></script>
+        <script src="~libs/overthrow/overthrow-toss.js"></script>
+
+        <script>
+            //before js imports
+            var LoadedPoll = function () {
+                console.log("new LoadedPoll");
+                var _this = this;
+                this.key = null;
+                this.realKey = null;
+                this.public = "";
+                this.country = "";
+                this.json = "";
+                this.obj = {};
+                this.style = $.extend({}, defaultStyle);
+
+                this.isPublic = function (value) {
+                    //value assign
+                    if (true === value) {
+                        if (window.p) {
+                            p.activePublic();
+                        }
+                    } else if (false === value) {
+                        if (window.p) {
+                            p.deactivePublic();
+                        }
+                        //ask
+                    } else {
+                        if ("-" == value[0]) {
+                            _this.public = "";
+                        } else {
+                            _this.public = "true";
+                        }
+                    }
+                    _this.public = value;
+                    return _this.public;
+                };
+            };
+            var screenPoll = new LoadedPoll();
+
+            ////////////////////////////////////////////////////////////////////            
+
+            //init globals
+            screenPoll.key = null;
+
+            //on run app first time from key redirection link
+            //only from intent, prevent when reload location!
+
+            var fromDeviceTranslucent = false;
+            if (window.Device) {
+                fromDeviceTranslucent = Device.isTranslucent();
+                console.log("fromDeviceTranslucent? = " + fromDeviceTranslucent + "; location.hash: " + location.hash);
+            }
+
+            if (location.hash == "#translucent" || fromDeviceTranslucent) {
+                console.log("is translucent");
+                window.isTranslucent = true;
+                $('html').addClass('translucent');
+
+                $("html").click(function (e) {
+                    if (e.target.nodeName == "HTML") {
+                        if (window.Device) {
+                            Device.close();
+                        }
+                    }
+                });
+            }
+
+            //KEY HANDLE
+            if (location.pathname.match(/\//g).length == 1 && location.pathname.length > 1) {
+                screenPoll.key = location.pathname.split("/").pop();
+                console.log("KEY = " + screenPoll.key)
+                //from app
+            }
+            //deprecated?
+            else if (location.search) { //before the ?
+                screenPoll.key = location.search.substr(1);
+                console.log("before the ? KEY = " + screenPoll.key);
+            }
+
+            if (screenPoll.key && !location.hash) {
+                //header could be Twitter header webview
+                $("html").addClass("withoutHeader");
+                keyLinkPage = true;
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+        <div id="header">
+            <!--VOTE-->
+            <div id="voteHeader">
+                <table>
+                    <tr>
+                        <td class="title">
+                            <span id="headerTitle">Click to Vote</span>
+                        </td>
+                        <td width="1%">
+                            <button id="toPolls" lang="PublicPolls"></button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--POLLS-->
+            <div id="pollsHeader" style="display:none">                
+                <table id="search">
+                    <tr>
+                        <td class="input title">
+                            <span lang="PopularPolls"></span>
+                            <form>
+                                <input type="text"/>
+                            </form>
+                        </td>
+                        <!--                        <td class="button">
+                                                    <span class="searchIcon"></span>
+                                                </td>-->
+                        <td class="button searchIcon">
+                            <!--<span class="searchIcon"></span>-->
+                        </td>
+                        <td width="1%">
+                            <button id="newPoll" lang="New"></button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--/POLLS-->
+        </div>
+
+        <div class="wrapper">
+            <div id="body" class="body">
+
+                <div id="mainPageContainer">
+                    <div id="mainPage">
+
+                        <p id="errorLog"></p>
+
+                        <div id="loading" class="loader">
+                            <img src="~img/loader.gif"/>
+                        </div>
+
+                        <div id="firstTime">
+                            <div>
+                                <p>
+                                    <b lang="Welcome"></b>
+                                </p> 
+                                <p class="text" lang="rules"></p> 
+                            </div>
+                            <button id="firstOk" lang="firstOk"></button>
+                            <!--pretty sure nobody starts first time to make poll !-->
+                            <!--<button id="firstCreate" style="float: right" lang="MakeNew"></button>-->
+                        </div>
+
+                        <div id="creator">
+                            <textarea id="question" rows="2"></textarea>
+                            <br/>
+                            <textarea id="options" rows="5"></textarea>
+                            <table>
+                                <tr>
+                                    <td id="username">
+                                        <input type="text"/>
+                                    </td>
+                                    <td id="create">
+                                        <button lang="Create"></button>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <div style="height: 7px;"></div>
+
+                            <div id="stored">
+                                <hr/>
+                                <div lang="VotedPolls"></div>
+                                <div class="right" lang="swipeToRemove"></div>
+                                <div class="list"></div>
+                            </div>
+                            <div id="showPolls" class="dashedButton" lang="showYourPolls"></div>
+                        </div>
+
+                        <div id="users">
+                            <div class="list"></div>
+                            <div style="text-align: right">
+                                <button onclick="backVotation()" lang="Back"></button>
+                            </div>
+                        </div>
+
+                        <div id="votation">
+                            <div id="votationBox" class="votation"></div>
+                            <div id="votationButtons"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="pollsPageContainer">
+                    <div id="pollsPage"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--called script needs run after html to work with it!-->
+        <script>
+            var ctxx = 1;
+
+            var localhost = document.location.hostname == "localhost";
+            var isAndroid, iPhone, webview;
+            if (!window.Device) {
+                Device = false;
+                $.getScript("browserStart.js");
+            } else {
+                $("html").addClass("Device");
+            }
+
+            //before tag placeholders
+            translateTags();
+
+            //DEBUG //WARN: if not localhost, PREMIUM code -> loads home in bucle!
+            if (localhost) {
+                $('#premium').remove();
+                $('body').append($('<div id="premium">').load('~premium/premium.html'));
+                //on localhost not have this file
+            }
+
+            var webDEBUG = true;
+
+            //user            
+            var userId;
+
+            //DATA
+            var originalVotes, originalPublic, originalCountry, originalLink;
+
+            //globals
+            var h = 35;
+            var totalVotes;
+            var keyLinkPage = false;
+
+            //HASH FUNCTION
+            $(document).ready(function () {
+                console.log("principal document ready");
+
+                //placeholders
+                $("#question").attr("placeholder", lang["QuestionPlaceholder"]);
+                $("#options").attr("placeholder", lang["OptionsPlaceholder"]);
+                $("#username input").attr("placeholder", lang["UsernamePlaceholder"]);
+                $("#search .input input").attr("placeholder", lang["search"]);
+
+                //only for web index.html redirection requests! not 4 APP
+                if (!window.Device) {
+                    myIP();
+                } else {
+                    Device.loadProfile();
+                }
+
+                //get userName not Device way (before any return)
+                var userName = localStorage.getItem("userName");
+                if (userName) {
+                    $("#username input").val(userName);
+                }
+
+                //LOAD HASH after know is key or not to handle function calls
+                if (!screenPoll.key && location.hash) {
+                    console.log("lodHash() without key");
+                    loadHashData();
+                }
+
+                if (screenPoll.key) {
+                    loadKeyPoll();
+
+                } else if (!location.hash) {
+                    //defaultPage on location.hash from java
+                    console.log("!key and !location.hash");
+                    defaultPage();
+                }
+
+                //make backround fixed (soft-keyboard resize)
+                setTimeout(function () {
+                    var backgroundWidth = getBackgroundSize($("html")[0]).width;
+                    console.log("backgroundWidth: " + backgroundWidth);
+                    $("html").css("background-size", backgroundWidth + "px auto");
+                }, 2000); //need completely loaded page
+            });
+
+            function loadKeyPoll() {
+                //first
+                loading();
+
+                //callback
+                if (location.hash) {
+                    window.hashCallback = loadHashData;
+                }
+
+                var isCountry = screenPoll.key.indexOf("-") > 0;
+                if (screenPoll.key[0] != "-" || isCountry) {
+                    //public = true;
+                    screenPoll.isPublic("true");
+                    if (isCountry) {
+                        screenPoll.country = screenPoll.key.split("-").shift();
+                    }
+
+                } else {
+                    //TODO: activate maybe when app goes big
+                    //notice(transl("warnNotPublic"));
+                }
+
+                requestPollByKey(screenPoll.key);
+
+                //not save
+                console.log("share button");
+                $("#send").attr("class", "share");
+
+                //prevent swipe events
+                $(document).on("swiperight.swipePrevent swipeleft.swipePrevent touchstart.swipePrevent touchend.swipePrevent touchup.swipePrevent", function (e) {
+                    e.stopPropagation();
+                });
+            }
+
+            function loadHashData() {
+                console.log("loadHashData");
+                var func = location.hash.split("#")[1];
+                if (func && window[func]) {
+                    //if is funcion (like loading), prevent go #home
+                    window[func]();
+
+                } else {
+                    hashChanged(location.hash);
+                    //console.log(func + "() was not a function -> hashChanged()");
+                }
+                return;
+            }
+
+            //hash change like 'back button'
+            $(window).on('hashchange', function () {
+                console.log("hashchange");
+                hashChanged(location.hash);
+            });
+
+            //ON LOAD VOTATION AND STORED
+            function loadAjaxKey(url, callback, findCache) {
+                console.log("url: " + url + " on loadAjaxKey()");
+
+                // jquery not allows overrideMimeType
+                var xhr = new XMLHttpRequest();
+                var nocache = "nocache=" + (new Date()).getTime();
+                if (findCache) {
+                    nocache = "";
+                }
+                xhr.open('GET', url + nocache); //absolute no cache
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            callback(xhr.responseText);
+                        } else {
+                            console.log("Error " + xhr.status + " occurred uploading your file.");
+                            callback(false);
+                        }
+                    }
+                };
+                // important 4 accents and, ñ, etc..
+                xhr.overrideMimeType('text/plain; charset=ISO-8859-1');
+                xhr.send();
+            }
+
+            function reset() {
+                console.log("reset");
+                resetData();
+                defaultPage();
+                resume();
+            }
+
+            function defaultPage() {
+                console.log("default page");
+                //if not in Device, create poll is strange
+                console.log(location.hash)
+//                if (location.hash != "#home") {
+                    loadHash("home");
+//                }
+//                if (!window.Device) {
+//                    $("#body").addClass("pollsView");
+//                }
+
+                console.log("remove translucent class");
+                $('html').removeClass('translucent');
+            }
+
+            function resetData() {
+                console.log("resetData newUser");
+                user = newUser(true);
+                screenPoll = new LoadedPoll();
+            }
+
+            //FROM ANDROID ACTIVITY ///////////////////////////
+
+            //define if is already created poll for premium options
+            var loadedPoll = false;
+
+            function checkCountry(keyId) {
+                if (keyId.indexOf("-") < 1) {
+                    return;
+                }
+                var country = keyId.split("-").shift();
+
+                if (country) { //then is public
+                    var countryName = getCountryName(country.toUpperCase(), getUserLang());
+
+                    if (!isUserCountry(country)) {
+                        if ("undefined" != typeof publicId && publicId) {
+                            disableVotation();
+                            notice(transl("WrongCountry") + countryName + ".");
+                        }
+                        //ELSE ask phone when click
+
+                    } else {
+                        //only say country disponibility if not errors or notices ¿?
+                        if ($("#linksLink").html() == "") {
+                            notice(lang["PollOnlyAvailableIn"] + countryName + ".");
+                        }
+                    }
+                }
+            }
+
+            //device
+            function loading() {
+                console.log("loading");
+                $("#mainPage > div").hide();
+                $("#loading").show();
+            }
+
+            //from DEVICE (not loadHash direcly cose needs check "needPermission" value)
+            function firstTime(needPermission) {
+                if (window.firstTimeStarted) {
+                    console.log("firstTimeStarted");
+                    loadHash("home");
+                    return;
+                }
+                window.firstTimeStarted = true;
+                $("html").addClass("firstTime");
+
+                //allow change hash event
+                loadHash("firstTime");
+
+                //not ask for permission on start app, is agressive
+                if (needPermission) {
+                    $("#firstTime .text").removeAttr("lang");
+                    var allowText = transl("AllowAppServices");
+                    $("#firstTime .text").html(allowText);
+
+                    $("#firstTime").append('<br><br/><br/>'
+                            + '<small style="color:grey">'
+                            + transl("whyNeedServicesPermission")
+                            + '</small>');
+                    $("#firstOk").text(transl("Activate"));
+                }
+            }
+
+            //device (preload key only)
+            function loadKey(id, newkey) {
+                console.log("loadKey: " + newkey);
+                if (window.lastKeyAsk != id) {
+                    console.log("older key retrieved. lastKeyAsk: " + lastKeyAsk + ", id: " + id);
+                    return;
+                }
+
+                //save private key only!
+                if (newkey[0] == "-") {
+                    console.log("new key = " + newkey);
+                    localStorage.setItem("unusedKey", newkey);
+                }
+                var key = screenPoll.key = newkey;
+
+                if (!screenPoll.json) {
+                    console.log("verbose: not json on key: " + key + " yet");
+                    return;
+                }
+                saveLocally(key, screenPoll.json);
+
+                //prevent bugs. share when receive a key? no!
+                //$("#send")attr("class", "share");
+            }
+
+            function translucent() {
+                //if want 'loading()' symbol, call from java - on 'firstTime' is ugly 
+                //loading();
+            }
+
+            //AJAX
+            if (document.referrer && -1 == document.referrer.indexOf("click-to-vote.at") && !window.Device) {
+                console.log("referer: " + document.referrer);
+                $.ajax({
+                    method: "POST",
+                    url: "ajax.php",
+                    data: {
+                        action: "addWebUsage",
+                        url: document.referrer
+                    }
+                }).done(function (msg) {
+//                    console.log("referer: ");
+//                    console.log(msg);
+                });
+            }
+
+        </script>
+
+    </body>
+</html>

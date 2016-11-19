@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\TroLLSSD\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\1.6.1\efb0a36546aa8857ab8df358b106c1817e03cbee\retrofit-1.6.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="efb0a36546aa8857ab8df358b106c1817e03cbee">
+        <dex dex="C:\Users\TroLLSSD\AndroidstudioProjects\imageVote_premium1\app\build\intermediates\pre-dexed\debug\retrofit-1.6.1_b2adc8a1ce4f588c5a5e527427fdb9d0968fe7af.jar" />
+    </item>
+    <item
+        jar="C:\Users\TroLLSSD\AndroidstudioProjects\imageVote_premium1\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\TroLLSSD\AndroidstudioProjects\imageVote_premium1\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.2.0_79163bac47fda09b8eba67b25fa40a63cb4224ba.jar" />
+    </item>
+    <item
+        jar="C:\Users\TroLLSSD\AndroidstudioProjects\imageVote_premium1\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="27d9ba204291d889f4f0fe10d1343a2710e463d4">
+        <dex dex="C:\Users\TroLLSSD\AndroidstudioProjects\imageVote_premium1\app\build\intermediates\pre-dexed\debug\com.digits.sdk.android-digits-1.5.0_32544e447530dbb484735be0e195f48684cab4a3.jar" />
+    </item>
+    <item
+        jar="C:\Users\TroLLSSD\AndroidstudioProjects\imageVote_premium1\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\TroLLSSD\AndroidstudioProjects\imageVote_premium1\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0_442b357694d07f85982a6ae82951c08182e90089.jar" />
+    </item>
+    <item
+        jar="C:\Users\TroLLSSD\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="C:\Users\TroLLSSD\AndroidstudioProjects\imageVote_premium1\app\build\intermediates\pre-dexed\debug\gson-2.2.4_cc1dd236d63523dbe97e603fbc5e5a1a15b6db95.jar" />
+    </item>
+    <item
+        jar="C:\Users\TroLLSSD\AndroidstudioProjects\imageVote_premium1\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.3.4\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b4a61385d2b7a751540d97d28090e322704f9f1f">
+        <dex dex="C:\Users\TroLLSSD\AndroidstudioProjects\imageVote_premium1\app\build\intermediates\pre-dexed\debug\com.twitter.sdk.android-twitter-core-1.3.4_6d97f084d27eba5501ae93b2757b3a045539637c.jar" />
+    </item>
+    <item
+        jar="C:\Users\TroLLSSD\AndroidstudioProjects\imageVote_premium1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\TroLLSSD\AndroidstudioProjects\imageVote_premium1\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-22.2.0_330acf9dc8fac9a524877ffbdb0559a66448ad33.jar" />
+    </item>
+    <item
+        jar="C:\Users\TroLLSSD\AndroidstudioProjects\imageVote_premium1\app\build\intermediates\exploded-aar\io.fabric.sdk.android\fabric\1.3.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="62753ea30b9fd44e248c50952a36c4b6a4b3eb73">
+        <dex dex="C:\Users\TroLLSSD\AndroidstudioProjects\imageVote_premium1\app\build\intermediates\pre-dexed\debug\io.fabric.sdk.android-fabric-1.3.1_e2d59bee50fff1b22dab317aa36ccdce84763cc7.jar" />
+    </item>
+    <item
+        jar="C:\Users\TroLLSSD\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\Users\TroLLSSD\AndroidstudioProjects\imageVote_premium1\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0_7246eb0653dbec0c5ec46cfd433e0642882f0d81.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    
+    <string name="facebookOptionLabel">facebook</string> 
+    <string name="moreShareOptionsLabel">mostrar todo</string>
+    <string name="considerUsageAccess">mejora el redireccionamiento en \nPrivacy→Security→Usage access</string>
+    <string name="SelectImage">Selecciona una imagen o haz una foto</string>
+    
+    <string name="questionGoogleServices">están instalados los servicios de google play?</string>
+    <string name="noSocialApps">no se han encontrado apps sociales!</string>
+    <string name="shareWith">compartir con:</string>
+    <string name="jsError">error de inyección javascript:</string>
+    <string name="connectionFailed">fallo de conexión</string>
+    <string name="emptyKey">el servidor a respondido con una clave vacía</string>
+    <string name="saveImageError">por favor, comprueba que no estés bloqueando la tarjeta SD como conectando tu dispositivo a un PC</string>
+    
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <style name="Theme.AppTheme" parent="android:style/Theme.NoTitleBar">
+        <!-- This disables the black preview screen -->
+        <item name="android:windowDisablePreview">true</item>
+        
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <string name="free_name" translatable="false">Click to Vote</string>
+    <string name="pro_name" translatable="false">Click to Vote +</string>
+    <string name="is_premium" translatable="false"></string>
+        
+    <string name="facebook_app_id" translatable="false">443205739202900</string> 
+    <string name="facebookOptionLabel">facebook</string> 
+    <string name="moreShareOptionsLabel">show all</string>
+    <string name="considerUsageAccess">improve redirections on \nPrivacy→Security→Usage access</string>
+    <string name="SelectImage">Select an image or take a photo</string>
+    
+    <string name="questionGoogleServices">are google play services installed?</string>
+    <string name="noSocialApps">no social apps founded!</string>
+    <string name="shareWith">share with:</string>
+    <string name="jsError">javascript injection from android catched error:</string>
+    <string name="connectionFailed">connection failed</string>
+    <string name="emptyKey">empty key response</string>
+    <string name="saveImageError">please check you\'re not locked the SD card like connecting your device to a PC</string>
+    
+    <!--DIGITS-->
+    <string name="dgts__login_digits_text">PRUEBA</string>
+    
+</resources>
