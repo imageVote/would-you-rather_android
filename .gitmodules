@@ -3,4 +3,4 @@
 	url = https://trollderiu@bitbucket.org/imageVote/android.git
 [submodule "app_free/src/main/assets"]
 	path = app_free/src/main/assets
-	url = https://trollderiu@bitbucket.org/imageVote/would-you-rather_android.git
+	url = https://trollderiu@bitbucket.org/imageVote/would-you-rather.git
