@@ -1,3 +1,6 @@
 [submodule "app_free/src/main/assets"]
 	path = app_free/src/main/assets
 	url = https://trollderiu@bitbucket.org/imageVote/would-you-rather.git
+[submodule "app_free/src/main/java/at/clicktovote"]
+	path = app_free/src/main/java/at/clicktovote
+	url = https://trollderiu@bitbucket.org/imageVote/android.git
