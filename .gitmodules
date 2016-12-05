@@ -1,0 +1,3 @@
+[submodule "assets"]
+	path = app_free/src/main/assets
+	url = https://trollderiu@bitbucket.org/imageVote/would_you_rather.git
