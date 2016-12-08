@@ -1,5 +1,5 @@
-[submodule "app_free/src/main/java/at/wouldyourather"]
-	path = app_free/src/main/java/at/wouldyourather
+[submodule "app_free/src/main/java/at/imagevote"]
+	path = app_free/src/main/java/at/imagevote
 	url = https://trollderiu@bitbucket.org/imageVote/android.git
 [submodule "app_free/src/main/assets"]
 	path = app_free/src/main/assets
