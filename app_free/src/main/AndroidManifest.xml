@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="at.clicktovote"
-          android:versionCode="31"
-          android:versionName="0.31" 
-          android:sharedUserId="at.clicktovote"
+          package="at.wouldyourather"
+          android:versionCode="1"
+          android:versionName="0.1" 
+          android:sharedUserId="at.wouldyourather"
           xmlns:tools="http://schemas.android.com/tools">
     <!--'android:sharedUserId' lets share preferences between apps-->
 
