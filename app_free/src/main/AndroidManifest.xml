@@ -29,7 +29,7 @@
 		
         <!--SINGLE TASK--> 
         <activity
-            android:name=".VoteImageActivity"
+            android:name=".MainActivity"
             android:launchMode="singleTask" 
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
         </activity>
@@ -39,7 +39,7 @@
             android:icon="@drawable/ic_launcher_free"
             android:name=".FreeActivity"
             android:enabled="true"
-            android:targetActivity=".VoteImageActivity">
+            android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -51,7 +51,7 @@
             android:icon="@drawable/ic_launcher_pro" 
             android:name=".PremiumActivity"
             android:enabled="false"
-            android:targetActivity=".VoteImageActivity">
+            android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -60,7 +60,7 @@
         
         <!--launchMode: standard callas and puts over normal activity-->
         <activity
-            android:name="at.clicktovote.LinkActivity"
+            android:name="at.imageVote.LinkActivity"
             android:launchMode="singleInstance" 
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
 
@@ -77,7 +77,7 @@
         
         <!-- MORE share options activity-->
         <activity
-            android:name=".MoreShareOptions"
+            android:name="at.imageVote.MoreShareOptions"
             android:icon="@drawable/more_icon" 
             android:label="@string/moreShareOptionsLabel"
             android:launchMode="singleInstance" >
