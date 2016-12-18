@@ -1,3 +1,14 @@
+/.gradle/
+/.idea/
 /build/
+/gradle/
+/private/
 /.nb-gradle/
+/app_free/.gradle/
+/app_free/.idea/
 /app_free/build/
+/app_free/private/
+/app_free/app_free.iml
+/app_free/gradlew
+/app_free/gradlew.bat
+/app_free/local.properties
