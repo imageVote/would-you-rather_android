@@ -60,7 +60,7 @@
         
         <!--launchMode: standard callas and puts over normal activity-->
         <activity
-            android:name="at.imageVote.LinkActivity"
+            android:name="at.imagevote.LinkActivity"
             android:launchMode="singleInstance" 
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
 
@@ -77,7 +77,7 @@
         
         <!-- MORE share options activity-->
         <activity
-            android:name="at.imageVote.MoreShareOptions"
+            android:name="at.imagevote.MoreShareOptions"
             android:icon="@drawable/more_icon" 
             android:label="@string/moreShareOptionsLabel"
             android:launchMode="singleInstance" >

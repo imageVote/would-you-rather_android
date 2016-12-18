@@ -9,9 +9,9 @@
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
-    <string name="url" translatable="false">click-to-vote.at</string>
-    <string name="free_name" translatable="false">Click to Vote</string>
-    <string name="pro_name" translatable="false">Click to Vote +</string>
+    <string name="url" translatable="false">192.168.1.82/would-you-rather_web/</string>
+    <string name="free_name" translatable="false">Would you Rather</string>
+    <string name="pro_name" translatable="false">Would you Rather +</string>
     <string name="is_premium" translatable="false"></string>
         
     <string name="facebook_app_id" translatable="false">443205739202900</string> 
