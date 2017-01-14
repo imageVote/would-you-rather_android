@@ -9,11 +9,12 @@
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
-    <string name="url" translatable="false">192.168.1.82/would-you-rather_web/</string>
-    <string name="url_core" translatable="false">192.168.1.82/would-you-rather_web/core/</string>
+    <string name="url" translatable="false">would-you-rather.tk</string>
+    <!--<string name="url_core" translatable="false">192.168.1.82/would-you-rather_web/core</string>-->
+    <string name="url_core" translatable="false">would-you-rather.tk/core</string>
     <string name="package_name" translatable="false">at.clicktovote</string>
-    <string name="free_name" translatable="false">Would you Rather</string>
-    <string name="pro_name" translatable="false">Would you Rather +</string>
+    <string name="free_name" translatable="false">Would Rather</string>
+    <string name="pro_name" translatable="false">Would Rather +</string>
     <string name="is_premium" translatable="false"></string>
         
     <string name="facebook_app_id" translatable="false">443205739202900</string> 
