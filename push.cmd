@@ -1,5 +1,6 @@
 
 REM git submodule foreach --recursive git merge --abort
+git submodule foreach --recursive git rebase --abort
 git submodule foreach --recursive git reset --hard
 
 git submodule foreach --recursive git add .
