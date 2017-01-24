@@ -9,6 +9,7 @@ git submodule foreach --recursive git commit -m ".cmd"
 git submodule foreach --recursive git pull
 git submodule foreach --recursive git push
 
+git rebase --abort
 git add .
 git commit -m ".cmd"
 git pull
