@@ -12,7 +12,8 @@
     <string name="url" translatable="false">would-you-rather.tk</string>
     <!--<string name="url_core" translatable="false">192.168.1.82/would-you-rather_web/core</string>-->
     <string name="url_core" translatable="false">would-you-rather.tk/core</string>
-    <string name="package_name" translatable="false">at.clicktovote</string>
+    <string name="url_keys" translatable="false">would-you-rather.tk/core/data</string>
+    <string name="package_name" translatable="false">at.imagevote</string>
     <string name="free_name" translatable="false">Would Rather</string>
     <string name="pro_name" translatable="false">Would Rather +</string>
     <string name="is_premium" translatable="false"></string>
@@ -32,6 +33,8 @@
     <string name="connectionFailed">connection failed</string>
     <string name="emptyKey">empty key response</string>
     <string name="saveImageError">please check you\'re not locked the SD card like connecting your device to a PC</string>
+    <string name="keyNotFound">poll not found</string>
+    <string name="wrongJsonPoll">poll is broken</string>
     
     <!--DIGITS-->
     <string name="dgts__login_digits_text">PRUEBA</string>

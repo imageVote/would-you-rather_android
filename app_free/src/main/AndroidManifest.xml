@@ -68,6 +68,7 @@
             <intent-filter>
                 <!--important android:pathPattern prevents no last slash url-->
                 <data android:host="would-you-rather.at" android:scheme="http" android:pathPattern="/.*"/>
+                <data android:host="would-you-rather.tk" android:scheme="http" android:pathPattern="/.*"/>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
