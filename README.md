@@ -10,11 +10,3 @@ PULL:
 ```
 sh pull.sh
 ```
-
-CHECK OUT:
-git submodule foreach --recursive git checkout master 
-( git checkout master )
-
-PULL:
-git submodule foreach --recursive git pull origin master
-( git pull )
