@@ -34,9 +34,6 @@
     <string name="emptyKey">empty key response</string>
     <string name="saveImageError">please check you\'re not locked the SD card like connecting your device to a PC</string>
     <string name="keyNotFound">poll not found</string>
-    <string name="wrongJsonPoll">poll is broken</string>
-    
-    <!--DIGITS-->
-    <string name="dgts__login_digits_text">PRUEBA</string>
+    <string name="wrongJsonPoll">poll is damaged</string>
     
 </resources>

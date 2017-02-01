@@ -12,5 +12,6 @@
     <string name="connectionFailed">fallo de conexión</string>
     <string name="emptyKey">el servidor a respondido con una clave vacía</string>
     <string name="saveImageError">por favor, comprueba que no estés bloqueando la tarjeta SD como conectando tu dispositivo a un PC</string>
-    
+    <string name="keyNotFound">votacion no encontrada</string>
+    <string name="wrongJsonPoll">la votacion está dañada</string>
 </resources>

@@ -1,7 +1,8 @@
 
 buildscript {
     repositories {
-        mavenCentral() //comment as transitive = false
+        //mavenCentral() //comment as transitive = false
+        jcenter() //comment as transitive = false
         maven { url 'https://maven.fabric.io/public' }
     }
 
