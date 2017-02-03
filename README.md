@@ -8,16 +8,5 @@ chown -R www-data:www-data would-you-rather_android
 ```
 PULL:
 ```
-git pull
-git --git-dir=would-you-rather_android/app_free/src/main/assets/.git pull
-git --git-dir=would-you-rather_android/app_free/src/main/assets/~commons/.git pull
-git --git-dir=would-you-rather_android/app_free/src/main/java/at/imagevote.git pull
+sh pull.sh
 ```
-
-CHECK OUT:
-git submodule foreach --recursive git checkout master 
-( git checkout master )
-
-PULL:
-git submodule foreach --recursive git pull origin master
-( git pull )
