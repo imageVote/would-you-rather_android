@@ -1,20 +1,19 @@
-/.gradle/
-/.idea/
-/.nb-gradle/
+*.iml
+.gradle
+local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+build/
+/captures
 
-/build/
-/gradle/
-/private/
+.gradle/
+.idea/
+.nb-gradle/
 
-/app_free/.gradle/
-/app_free/.idea/
-/app_free/build/
-/app_free/gradle/
-/app_free/private/
+gradle/
+private/
 
-/app_free/app_free.iml
 /app_free/build_gradle
 /app_free/gradlew
 /app_free/gradlew.bat
-/app_free/local.properties
-/nbproject/private/
