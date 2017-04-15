@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    
+<resources
+    tools:ignore="MissingTranslation" xmlns:tools="http://schemas.android.com/tools">
+
     <style name="Theme.AppTheme" parent="android:style/Theme.NoTitleBar">
         <!-- This disables the black preview screen -->
         <item name="android:windowDisablePreview">true</item>
@@ -9,17 +10,25 @@
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
-    <string name="url" translatable="false">would-you-rather.tk</string>
+    <string name="url" translatable="false">wouldyourather.co</string>    
     <!--<string name="url_core" translatable="false">192.168.1.82/would-you-rather_web/core</string>-->
-    <string name="url_core" translatable="false">would-you-rather.tk/core</string>
-    <string name="url_keys" translatable="false">would-you-rather.tk/core/data</string>
+    <string name="url_core" translatable="false">wouldyourather.co/core</string>
+    <string name="url_keys" translatable="false">wouldyourather.co/core/data</string>
     <string name="package_name" translatable="false">at.imagevote</string>
     <string name="free_name" translatable="false">Would Rather</string>
     <string name="pro_name" translatable="false">Would Rather +</string>
     <string name="is_premium" translatable="false"></string>
-        
-    <string name="facebook_app_id" translatable="false">443205739202900</string> 
     
+    <string name="parse_id" translatable="false">4134380a-1991-4ad7-9f43-1e7f27855e29</string>
+
+    <!--<<string name="facebook_app_id" translatable="false">443205739202900</string>-->
+    <string name="facebook_app_id" translatable="false">1331514456968402</string>
+    <string name="facebook_placement_id" translatable="false">1331514456968402_1331553776964470</string>
+    <string name="facebook_placement_id2" translatable="false">1879320152282480_1879320752282420</string>
+    <!--<string name="banner_ad_unit_id">ca-app-pub-1068442097767769/5971755533</string>-->
+    <string name="banner_ad_unit_id">ca-app-pub-1068442097767769/3963848334</string>
+    <string name="banner_ad_unit_id2">ca-app-pub-1933379640772575/1620240847</string>
+
     <!--LANGUAGE:-->
     <string name="facebookOptionLabel">facebook</string> 
     <string name="moreShareOptionsLabel">show all</string>
@@ -40,7 +49,7 @@
         You cannot share a poll without \n "READ EXTERNAL STORAGE" \n permission! \n 
         Please allow that permission.
     </string>
-    <!--<string name="readExternalStorageResponse">You cannot share a poll without READ EXTERNAL STORAGE permission! Please allow that permission.</string>-->
+    <string name="readExternalStorageResponse2"></string>
 
     <string name="app_name">FiveStarsLibrary</string>
     <string name="rate_ok">Rate in Google Play</string>

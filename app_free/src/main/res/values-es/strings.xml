@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>    
+<resources>
+
     <string name="facebookOptionLabel">facebook</string> 
     <string name="moreShareOptionsLabel">mostrar todo</string>
     <string name="considerUsageAccess">mejora el redireccionamiento en \nPrivacy→Security→Usage access</string>
@@ -14,4 +15,5 @@
     <string name="saveImageError">por favor, comprueba que no estés bloqueando la tarjeta SD como conectando tu dispositivo a un PC</string>
     <string name="keyNotFound">votacion no encontrada</string>
     <string name="wrongJsonPoll">la votacion está dañada</string>
+
 </resources>
