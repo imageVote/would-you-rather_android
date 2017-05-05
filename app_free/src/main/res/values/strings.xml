@@ -22,8 +22,9 @@
     <string name="parse_id" translatable="false">4134380a-1991-4ad7-9f43-1e7f27855e29</string>
 
     <!--<<string name="facebook_app_id" translatable="false">443205739202900</string>-->
-    <string name="facebook_app_id" translatable="false">1331514456968402</string>
-    <string name="facebook_placement_id" translatable="false">1331514456968402_1331553776964470</string>
+    <!--<string name="facebook_app_id" translatable="false">1331514456968402</string>-->
+    <!--<string name="facebook_placement_id" translatable="false">1331514456968402_1331553776964470</string>-->
+    <string name="facebook_placement_id" translatable="false">424125774612619_424129141278949</string>
     <string name="facebook_placement_id2" translatable="false">1879320152282480_1879320752282420</string>
     <!--<string name="banner_ad_unit_id">ca-app-pub-1068442097767769/5971755533</string>-->
     <string name="banner_ad_unit_id">ca-app-pub-1068442097767769/3963848334</string>
