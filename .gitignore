@@ -17,3 +17,7 @@ private/
 /app_free/build_gradle
 /app_free/gradlew
 /app_free/gradlew.bat
+
+/libs_release
+/versions
+*.apk
