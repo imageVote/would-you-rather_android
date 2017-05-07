@@ -17,8 +17,11 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!--error catch-->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    
-    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!--ADS-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!--<uses-permission android:name="android.permission.GET_TASKS" />-->
     <!--Allow activate 'usage access' (checked)-->
     <!--'ProtectedPermissions' disable warning that permission is system level and will not be granted to third-party apps-->
     <!--<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />-->
