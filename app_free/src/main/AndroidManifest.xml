@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="at.wouldyourather"
-          android:versionCode="5"
-          android:versionName="0.5"
+          android:versionCode="23"
+          android:versionName="0.23"
           android:sharedUserId="at.wouldyourather"
           xmlns:tools="http://schemas.android.com/tools">
     <!--'android:sharedUserId' lets share preferences between apps-->
 
     <uses-sdk 
-        android:minSdkVersion="9"
+        android:minSdkVersion="11"
         android:targetSdkVersion="23"
         tools:overrideLibrary="com.facebook"/>
         
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!--error catch-->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <!--ADS-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
 
     <!--<uses-permission android:name="android.permission.GET_TASKS" />-->
     <!--Allow activate 'usage access' (checked)-->
@@ -27,7 +27,7 @@
     <!--<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />-->
            
     <application
-		android:icon="@drawable/ic_launcher_free"
+        android:icon="@drawable/ic_launcher_free"
         android:label="@string/free_name"
         tools:replace="android:label"
         android:theme="@style/Theme.AppTheme">

@@ -50,7 +50,7 @@ android {
     defaultConfig {
         minSdkVersion 11
         //minSdkVersion 15 //STARS plugin need!
-        targetSdkVersion 11
+        targetSdkVersion 23
         //multiDexEnabled true
     }
     signingConfigs {
@@ -92,7 +92,7 @@ dependencies {
     //}
     //STARS:
     //compile project(':fivestarslibrary')
-    //compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:appcompat-v7:23.2.0'
     //compile 'com.github.afollestad.material-dialogs:core:0.8.5.8'
     compile 'com.twitter.sdk.android:twitter-core:1.6.4'
     //PARSE
