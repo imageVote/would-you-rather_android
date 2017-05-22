@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="at.wouldyourather"
-          android:versionCode="23"
-          android:versionName="0.23"
+          android:versionCode="25"
+          android:versionName="0.25"
           android:sharedUserId="at.wouldyourather"
           xmlns:tools="http://schemas.android.com/tools">
     <!--'android:sharedUserId' lets share preferences between apps-->
@@ -19,7 +19,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <!--ADS-->
-    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <!--<uses-permission android:name="android.permission.GET_TASKS" />-->
     <!--Allow activate 'usage access' (checked)-->

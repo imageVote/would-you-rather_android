@@ -108,8 +108,10 @@ dependencies {
     compile 'com.google.android.gms:play-services-appindexing:9.6.1'
     //Firebase App Indexing (google search and install)
 
-
 }
 
 // ADD THIS AT THE BOTTOM
 //apply plugin: 'com.google.gms.google-services' //firebase
+
+
+//GRADLE IS OFFLINE TO DO FASTER BUILDS!!?
