@@ -1,4 +1,4 @@
-CLONE: (and give apache control!)
+CLONE: (and give apache control!) - It can be run in cmd
 ```
 git clone https://trollderiu@bitbucket.org/imageVote/would-you-rather_android.git would-you-rather_android
 git clone https://trollderiu@bitbucket.org/imageVote/would-you-rather.git would-you-rather_android/app_free/src/main/assets

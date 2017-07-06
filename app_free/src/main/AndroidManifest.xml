@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="at.wouldyourather"
-          android:versionCode="27"
-          android:versionName="0.27"
+          package="at.imagevote"
+          android:versionCode="35"
+          android:versionName="0.35"
           android:sharedUserId="at.wouldyourather"
           xmlns:tools="http://schemas.android.com/tools">
     <!--'android:sharedUserId' lets share preferences between apps-->
@@ -34,7 +34,7 @@
 		
         <!--SINGLE TASK--> 
         <activity
-            android:name=".MainActivity"
+            android:name="at.wouldyourather.MainActivity"
             android:launchMode="singleTask" 
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
         </activity>
@@ -42,9 +42,9 @@
         <activity-alias 
             android:label="@string/free_name" 
             android:icon="@drawable/ic_launcher_free"
-            android:name=".FreeActivity"
+            android:name="at.wouldyourather.FreeActivity"
             android:enabled="true"
-            android:targetActivity=".MainActivity">
+            android:targetActivity="at.wouldyourather.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -54,9 +54,9 @@
         <activity-alias 
             android:label="@string/pro_name" 
             android:icon="@drawable/ic_launcher_pro" 
-            android:name=".PremiumActivity"
+            android:name="at.wouldyourather.PremiumActivity"
             android:enabled="false"
-            android:targetActivity=".MainActivity">
+            android:targetActivity="at.wouldyourather.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -116,10 +116,11 @@
         </activity>
 
         <activity android:name="com.facebook.ads.InterstitialAdActivity" android:configChanges="keyboardHidden|orientation" />
-        
-        <meta-data
+
+        <!--<meta-data
             android:name="io.fabric.ApiKey"
-            android:value="17d20e8ed435e0e3808a1ced27eed2fafe3eed6f" /><!--Google Play services for App Indexing. https://g.co/AppIndexing/AndroidStudio-->
+            android:value="17d20e8ed435e0e3808a1ced27eed2fafe3eed6f" />-->
+        <!--Google Play services for App Indexing. https://g.co/AppIndexing/AndroidStudio-->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
