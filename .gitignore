@@ -20,4 +20,7 @@ private/
 
 /libs_release
 /versions
+
 *.apk
+app_free/libs/
+credentials.xml
